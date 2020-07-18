@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "343339973876",
+    "firebase_url": "https://kotprojmobile2you.firebaseio.com",
+    "project_id": "kotprojmobile2you",
+    "storage_bucket": "kotprojmobile2you.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343339973876:android:9d0903a60d50082354f2a1",
+        "android_client_info": {
+          "package_name": "com.kaltu.kotprojmobile2you"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343339973876-f00h9p73lj2rv86875khka8e8ch6s01e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFWYvcL1bmfTP_rsA5_xh_wP9oeMHeaMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343339973876-f00h9p73lj2rv86875khka8e8ch6s01e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
