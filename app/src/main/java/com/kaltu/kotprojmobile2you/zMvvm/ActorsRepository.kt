@@ -6,7 +6,7 @@ import com.kaltu.kotprojmobile2you.Constants
 import com.kaltu.kotprojmobile2you.zModels.Actor
 import com.kaltu.kotprojmobile2you.zUtils.Common
 
-class ActorRepository {
+class ActorsRepository {
     fun getListActors(): MutableLiveData<List<Actor>> {
         val listActorLiveData: MutableLiveData<List<Actor>> = MutableLiveData()
         val actorsRef = Common.actorsCollection.orderBy("nameArtistic")

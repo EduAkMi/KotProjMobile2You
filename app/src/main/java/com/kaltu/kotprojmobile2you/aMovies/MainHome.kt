@@ -9,13 +9,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kaltu.kotprojmobile2you.R
-import com.kaltu.kotprojmobile2you.zMvvm.ActorListViewModel
-import com.kaltu.kotprojmobile2you.zUtils.ActorAdapter
+import com.kaltu.kotprojmobile2you.zMvvm.ActorsListViewModel
+import com.kaltu.kotprojmobile2you.zUtils.ActorsAdapter
 import kotlinx.android.synthetic.main.fragment_main_home.*
 
 class MainHome : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_main_home, container, false)
     }
 
@@ -23,10 +22,10 @@ class MainHome : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerHome.layoutManager = LinearLayoutManager(context)
-        val actorViewModel = ViewModelProvider(activity!!).get<ActorListViewModel>(ActorListViewModel::class.java)
+        val actorViewModel = ViewModelProvider(activity!!).get<ActorsListViewModel>(ActorsListViewModel::class.java)
         actorViewModel.getListActors()
         actorViewModel.listActorLiveData.observe(viewLifecycleOwner, Observer {
-            val actorAdapter = ActorAdapter(context!!, it)
+            val actorAdapter = ActorsAdapter(context!!, it)
             recyclerHome.adapter = actorAdapter
             actorAdapter.notifyDataSetChanged()
         })

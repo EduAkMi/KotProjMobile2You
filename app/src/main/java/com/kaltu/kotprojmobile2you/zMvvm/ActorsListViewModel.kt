@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kaltu.kotprojmobile2you.zModels.Actor
 
-class ActorListViewModel : ViewModel() {
-    private val actorRepository = ActorRepository()
+class ActorsListViewModel : ViewModel() {
+    private val actorRepository = ActorsRepository()
     lateinit var listActorLiveData: MutableLiveData<List<Actor>>
 
     fun getListActors() {
