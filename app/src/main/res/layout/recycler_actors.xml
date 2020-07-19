@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E4E4E4"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/txtRecyclerActorsNameArtistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            tools:text="Johnny Depp" />
+
+        <TextView
+            android:id="@+id/txtRecyclerActorsNameFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            tools:text="John Johnny Christopher Depp II" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

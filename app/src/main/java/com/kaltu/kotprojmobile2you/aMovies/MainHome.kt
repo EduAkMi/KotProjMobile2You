@@ -5,7 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.kaltu.kotprojmobile2you.R
+import com.kaltu.kotprojmobile2you.zMvvm.ActorListViewModel
+import com.kaltu.kotprojmobile2you.zUtils.ActorAdapter
+import kotlinx.android.synthetic.main.fragment_main_home.*
 
 class MainHome : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -16,6 +22,13 @@ class MainHome : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        
+        recyclerHome.layoutManager = LinearLayoutManager(context)
+        val actorViewModel = ViewModelProvider(activity!!).get<ActorListViewModel>(ActorListViewModel::class.java)
+        actorViewModel.getListActors()
+        actorViewModel.listActorLiveData.observe(viewLifecycleOwner, Observer {
+            val actorAdapter = ActorAdapter(context!!, it)
+            recyclerHome.adapter = actorAdapter
+            actorAdapter.notifyDataSetChanged()
+        })
     }
 }
