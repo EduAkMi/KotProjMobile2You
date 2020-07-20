@@ -8,14 +8,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
-import com.kaltu.kotprojmobile2you.MainActivity
 import com.kaltu.kotprojmobile2you.MainActivity.Companion.fm
 import com.kaltu.kotprojmobile2you.R
 import com.kaltu.kotprojmobile2you.aMovies.ActorCollection
 import com.kaltu.kotprojmobile2you.zModels.Actor
 
-class ActorsAdapter(var context: Context,
-    var actorList: List<Actor>) : RecyclerView.Adapter<ActorsAdapter.ActorViewHolder>() {
+class ActorsAdapter(private var context: Context,
+    private var actorList: List<Actor>) : RecyclerView.Adapter<ActorsAdapter.ActorViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.recycler_actors, parent, false)

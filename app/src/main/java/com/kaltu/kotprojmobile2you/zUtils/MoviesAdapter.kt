@@ -13,8 +13,8 @@ import com.kaltu.kotprojmobile2you.zModels.Movies
 import com.squareup.picasso.Picasso
 import java.util.*
 
-class MoviesAdapter(var context: Context,
-    var moviesList: List<Movies>) : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
+class MoviesAdapter(private var context: Context,
+    private var moviesList: List<Movies>) : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.recycler_movies, parent, false)

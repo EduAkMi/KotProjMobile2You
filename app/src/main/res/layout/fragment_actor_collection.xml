@@ -75,7 +75,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The Very Best Of"
+                        android:text="@string/actor_collection_the_very_best_of"
                         android:textColor="@android:color/white"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -118,7 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" Likes"
+                        android:text="@string/actor_collection_likes"
                         android:textColor="@android:color/white"
                         android:textSize="13sp" />
                 </LinearLayout>
@@ -143,7 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" Views"
+                        android:text="@string/actor_collection_views"
                         android:textColor="@android:color/white"
                         android:textSize="13sp" />
                 </LinearLayout>
